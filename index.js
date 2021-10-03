@@ -337,6 +337,62 @@ bot.hears('подарить благословение', (ctx) => {
    disable_web_page_preview: true 
 })
 })
+bot.hears('швырнуть на пол', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> швырнул(а) на пол <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+})
+bot.hears('приготовить еду', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> приготовил(а) еду для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+})
+bot.hears('сделать подарок', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сделал(а) подарок для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+})
+bot.hears('позвать на забив', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> позвал(а) на забив <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+})
+bot.hears('сыграть в карты', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сыграл(а) в карты с <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+})
+bot.hears('покормить с ложечки', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> покормил(а) с ложечки <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+})
+bot.hears('сильно пнуть', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сильно пнул(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+})
 bot.hears('изгнать демонов', (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
@@ -345,7 +401,14 @@ bot.hears('изгнать демонов', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-
+bot.hears('изгнать демонов', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> изгнал(а) демонов из <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+})
 bot.command('rphelp', (ctx) => {
     ctx.reply(`РП Команды:
 плюнуть,
