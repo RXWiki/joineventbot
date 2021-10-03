@@ -292,7 +292,7 @@ bot.hears('избить', (ctx) => {
 bot.hears('подарить цветочек', (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
-    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> подарил(а) цветочек от души <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> подарил(а) цветочек от души для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
    parse_mode: "HTML", 
    disable_web_page_preview: true 
 })
