@@ -9,7 +9,7 @@ const bot = new Telegraf(process.env.token)
 
 let arr = [946645161, 1147885120, 813881359, 1999158089];
 
-bot.start((ctx) => ctx.reply('Welcome'))
+// bot.start((ctx) => ctx.reply('Welcome'))
 
 // const stage = new Stage([ageScene, nameScene])
 
@@ -150,11 +150,9 @@ bot.hears('совершить двойное самоубийство', (ctx) =>
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> совершил(а) двойное самоуйбийство с <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
    parse_mode: "HTML", 
    disable_web_page_preview: true 
+})   
 })
-    
-},(ctx) => {
-    ctx.reply(`ctx.message.text`)
-})
+
 bot.hears('уничтожить', (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
