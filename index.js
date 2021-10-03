@@ -37,14 +37,12 @@ bot.command('mute', (ctx) => {
         const now = Math.round(Date.now() / 1000)
         const period = Math.round(Math.random() * 50) + 80
         const until = now + 11 * period
-        ctx.restrictChatMember(ctx.message.reply_to_message.from.id, {until_date: until})
         try {
         ctx.restrictChatMember(ctx.message.reply_to_message.from.id, {until_date: until})
-        ctx.restrictChatMember(arg)
-        } catch(err){
-        console.log(err)
-        }
         ctx.reply(`Человек полностью заглушен.`)
+        } catch(err){
+        ctx.reply(`Что-то не выходит :()`)
+        }
         console.log(arg)
     }}}
 )
@@ -52,6 +50,7 @@ bot.command('mute', (ctx) => {
 bot.command('unmute', (ctx) => {
     for (let i = 0; i < arr.length - 1; i++) {
     if (ctx.message.from.id === arr[i]) {
+        try {
         ctx.restrictChatMember(ctx.message.reply_to_message.from.id, {
             can_send_messages: true,
             can_send_media_messages: true,
@@ -62,8 +61,10 @@ bot.command('unmute', (ctx) => {
             can_invite_users: true,
             can_pin_messages: true
         })
-        ctx.reply(`Person unmuted`)
-        
+        ctx.reply(`Человек вновь может что-то говорить!`)
+    } catch(err) {
+        ctx.reply(`Не получается снять кляп :()`)
+    }
     }
 }
 })
