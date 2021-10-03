@@ -393,22 +393,6 @@ bot.hears('сильно пнуть', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('изгнать демонов', (ctx) => {
-    let id = ctx.message.from.id
-    let id2 = ctx.message.reply_to_message.from.id
-    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> изгнал(а) демонов из <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
-   parse_mode: "HTML", 
-   disable_web_page_preview: true 
-})
-})
-bot.hears('изгнать демонов', (ctx) => {
-    let id = ctx.message.from.id
-    let id2 = ctx.message.reply_to_message.from.id
-    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> изгнал(а) демонов из <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
-   parse_mode: "HTML", 
-   disable_web_page_preview: true 
-})
-})
 bot.command('rphelp', (ctx) => {
     ctx.reply(`РП Команды:
 плюнуть,
@@ -436,7 +420,15 @@ bot.command('rphelp', (ctx) => {
 послать к чехонте,
 подарить благословение,
 изгнать демонов,
-покрестить`)
+покрестить,
+сильно пнуть,
+покормить с ложечки,
+сыграть в карты,
+позвать на забив,
+сделать подарок,
+приготовить еду,
+швырнуть на пол,
+`)
 })
 
 bot.launch()
