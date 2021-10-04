@@ -1,3 +1,4 @@
+
 const { Telegraf, Telegram, Markup, session, Scenes: { BaseScene, Stage } } = require('telegraf')
 const SceneGenerator = require('./session')
 const curScene = new SceneGenerator()
@@ -397,6 +398,16 @@ bot.hears('покормить с ложечки', (ctx) => {
    disable_web_page_preview: true 
 })
 })
+bot.hears('ударить топором', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    if(ctx.message.reply_to_message.from.id === 1147885120) {
+        ctx.reply(`Принтеру не засунуть`) } else {
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> засунул(а) топор в жопу <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+}})
 bot.hears('сильно пнуть', (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
@@ -405,16 +416,6 @@ bot.hears('сильно пнуть', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('ударить топором', (ctx) => {
-    let id = ctx.message.from.id
-    let id2 = ctx.message.reply_to_message.from.id
-    if(ctx.message.from.id === 1147885120) {
-        ctx.reply(`Принтеру не засунуть`) } else {
-    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> засунул(а) топор в жопу <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
-   parse_mode: "HTML", 
-   disable_web_page_preview: true 
-})
-}})
 bot.command('rphelp', (ctx) => {
     ctx.reply(`РП Команды:
 плюнуть,
@@ -458,3 +459,4 @@ bot.launch()
 // Enable graceful stop
 process.once('SIGINT', () => bot.stop('SIGINT'));
 process.once('SIGTERM', () => bot.stop('SIGTERM'))
+
