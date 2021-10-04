@@ -405,6 +405,16 @@ bot.hears('сильно пнуть', (ctx) => {
    disable_web_page_preview: true 
 })
 })
+bot.hears('ударить топором', (ctx) => {
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    if(ctx.message.reply_to_message.from.id === 1147885120){
+        ctx.reply(`Принтеру не засунуть`) } else {
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> засунул(а) топор в жопу <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+   parse_mode: "HTML", 
+   disable_web_page_preview: true 
+})
+}})
 bot.command('rphelp', (ctx) => {
     ctx.reply(`РП Команды:
 плюнуть,
@@ -439,7 +449,8 @@ bot.command('rphelp', (ctx) => {
 позвать на забив,
 сделать подарок,
 приготовить еду,
-швырнуть на пол
+швырнуть на пол,
+ударить топором
 `)
 })
 
