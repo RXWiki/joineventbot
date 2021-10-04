@@ -5,7 +5,7 @@ const curScene = new SceneGenerator()
 const ageScene = curScene.GenAgeScene()
 const nameScene = curScene.GenNameScene()
 require("dotenv").config();
-
+let oof = 'сильно пнуть'
 const bot = new Telegraf(process.env.token)
 
 let arr = [946645161, 1147885120, 813881359, 1999158089];
@@ -326,14 +326,6 @@ bot.hears('починить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('послать к чехонте', (ctx) => {
-    let id = ctx.message.from.id
-    let id2 = ctx.message.reply_to_message.from.id
-    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> послал(а) к чехонте <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
-   parse_mode: "HTML", 
-   disable_web_page_preview: true 
-})
-})
 bot.hears('покрестить', (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
@@ -408,7 +400,7 @@ bot.hears('ударить топором', (ctx) => {
    disable_web_page_preview: true 
 })
 }})
-bot.hears('сильно пнуть'.match(/сильно плюнуть/i), (ctx) => {
+bot.hears('сильно пнуть', (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сильно пнул(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -440,7 +432,6 @@ bot.command('rphelp', (ctx) => {
 подарить цветочек,
 удалить,
 починить,
-послать к чехонте,
 подарить благословение,
 изгнать демонов,
 покрестить,
