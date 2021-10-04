@@ -408,7 +408,7 @@ bot.hears('ударить топором', (ctx) => {
    disable_web_page_preview: true 
 })
 }})
-bot.hears('сильно пнуть', (ctx) => {
+bot.hears('сильно пнуть'.match(/сильно плюнуть/i), (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сильно пнул(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
