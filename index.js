@@ -1,14 +1,15 @@
-
+const axios = require('axios');
+const cheerio = require('cheerio');
+const { textContent } = require('domutils');
 const { Telegraf, Telegram, Markup, session, Scenes: { BaseScene, Stage } } = require('telegraf')
 const SceneGenerator = require('./session')
 const curScene = new SceneGenerator()
 const ageScene = curScene.GenAgeScene()
 const nameScene = curScene.GenNameScene()
 require("dotenv").config();
-let oof = 'сильно пнуть'
 const bot = new Telegraf(process.env.token)
-
 let arr = [946645161, 1147885120, 813881359, 1999158089];
+
 
 // bot.start((ctx) => ctx.reply('Welcome'))
 
@@ -149,7 +150,7 @@ bot.command('kick', (ctx) => {
 //         , 10000, console.log(`успешно`)})}}})
 
 
-bot.hears('плюнуть', (ctx) => {
+bot.hears(/[Пп]люнуть/, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> плюнул(а) в лицо <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -157,7 +158,7 @@ bot.hears('плюнуть', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('совершить двойное самоубийство', (ctx) => {
+bot.hears(/[Сс]овершить двойное самоубийство/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> совершил(а) двойное самоуйбийство с <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -166,7 +167,7 @@ bot.hears('совершить двойное самоубийство', (ctx) =>
 })   
 })
 
-bot.hears('уничтожить', (ctx) => {
+bot.hears(/[Уу]ничтожить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> уничтожил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -174,7 +175,7 @@ bot.hears('уничтожить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('поцеловать в ручку', (ctx) => {
+bot.hears(/[Пп]оцеловать в ручку/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> нежно поцеловал(а) в ручку <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -182,7 +183,7 @@ bot.hears('поцеловать в ручку', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('засосать', (ctx) => {
+bot.hears(/[Зз]асосать/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> засосал(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -190,7 +191,7 @@ bot.hears('засосать', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('сильно обнять', (ctx) => {
+bot.hears(/[Сс]ильно обнять/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> крепко обнял(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -198,7 +199,7 @@ bot.hears('сильно обнять', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('взять за ручку', (ctx) => {
+bot.hears(/[Вв]зять за ручку/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> нежно взял(а) за ручку <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -206,7 +207,7 @@ bot.hears('взять за ручку', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('съесть', (ctx) => {
+bot.hears(/[Сс]ъесть/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> съел(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -214,7 +215,7 @@ bot.hears('съесть', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('сесть', (ctx) => {
+bot.hears(/[Сс]есть/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сел(а) на <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -222,7 +223,7 @@ bot.hears('сесть', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('приобнять', (ctx) => {
+bot.hears(/[Пп]риобнять/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> приобнял(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -230,7 +231,7 @@ bot.hears('приобнять', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('оскорбить', (ctx) => {
+bot.hears(/[Оо]скорбить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> серьезно оскорбил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -238,7 +239,7 @@ bot.hears('оскорбить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('удушить', (ctx) => {
+bot.hears(/[Уу]душить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> удушил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -246,7 +247,7 @@ bot.hears('удушить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('расчленить', (ctx) => {
+bot.hears(/[Рр]асчленить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> расчленил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -254,7 +255,7 @@ bot.hears('расчленить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('взять за волосы', (ctx) => {
+bot.hears(/[Вв]зять за волосы/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> взял(а) за волосы <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -262,7 +263,7 @@ bot.hears('взять за волосы', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('обнять до удушья', (ctx) => {
+bot.hears(/[Оо]бнять до удушья/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> задушил(а) объятьями <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -270,7 +271,7 @@ bot.hears('обнять до удушья', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('лечь на плечо', (ctx) => {
+bot.hears(/[Лл]ечь на плечо/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> лег(ла) на плечо<a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -278,7 +279,7 @@ bot.hears('лечь на плечо', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('поклониться', (ctx) => {
+bot.hears(/[пП]оклониться/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> поклонился <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -286,7 +287,7 @@ bot.hears('поклониться', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('успокоить', (ctx) => {
+bot.hears(/[Уу]спокоить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> пытается успокоить <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -294,7 +295,7 @@ bot.hears('успокоить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('избить', (ctx) => {
+bot.hears(/[Ии]збить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> избил(а) до полусмерти <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -302,7 +303,7 @@ bot.hears('избить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('подарить цветочек', (ctx) => {
+bot.hears(/[Пп]одарить цветочек/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> подарил(а) цветочек от души для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -310,7 +311,7 @@ bot.hears('подарить цветочек', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('удалить', (ctx) => {
+bot.hears(/[Уу]далить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> удалил(а) из жизни <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -318,7 +319,7 @@ bot.hears('удалить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('починить', (ctx) => {
+bot.hears(/[Пп]очинить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> вернул(а) к жизни <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -326,7 +327,7 @@ bot.hears('починить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('покрестить', (ctx) => {
+bot.hears(/[Пп]окрестить/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> покрестил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -334,7 +335,7 @@ bot.hears('покрестить', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('подарить благословение', (ctx) => {
+bot.hears(/[П]одарить благословение/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> подарил(а) благославение <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -342,7 +343,7 @@ bot.hears('подарить благословение', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('швырнуть на пол', (ctx) => {
+bot.hears(/[Шш]вырнуть на пол/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> швырнул(а) на пол <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -350,7 +351,7 @@ bot.hears('швырнуть на пол', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('приготовить еду', (ctx) => {
+bot.hears(/[Пп]риготовить еду/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> приготовил(а) еду для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -358,7 +359,7 @@ bot.hears('приготовить еду', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('сделать подарок', (ctx) => {
+bot.hears(/[Сс]делать подарок/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сделал(а) подарок для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -366,7 +367,7 @@ bot.hears('сделать подарок', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('позвать на забив', (ctx) => {
+bot.hears(/[Пп]озвать на забив/, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> позвал(а) на забив <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -374,7 +375,7 @@ bot.hears('позвать на забив', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('сыграть в карты', (ctx) => {
+bot.hears(/[Сс]ыграть в карты/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сыграл(а) в карты с <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -382,7 +383,7 @@ bot.hears('сыграть в карты', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('покормить с ложечки', (ctx) => {
+bot.hears(/[Пп]окормить с ложечки/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> покормил(а) с ложечки <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -390,7 +391,7 @@ bot.hears('покормить с ложечки', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('ударить топором', (ctx) => {
+bot.hears(/[Уу]дарить топором/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> засунул(а) топор в жопу <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
@@ -398,14 +399,20 @@ bot.hears('ударить топором', (ctx) => {
    disable_web_page_preview: true 
 })
 })
-bot.hears('сильно пнуть', (ctx) => {
-    let id = ctx.message.from.id
-    let id2 = ctx.message.reply_to_message.from.id
-    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> сильно пнул(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+bot.hears(/[Сс]ильно пнуть \@.+/g, (ctx) => {
+    // let id = ctx.message.from.id
+    // let id2 = ctx.message.reply_to_message.from.id
+    let arg = ctx.message.text.split(" ").slice(2).join("").replace(/@/g, '').toString()
+    if(arg != ''){
+    ctx.reply(`<a href='tg://user?id=${ctx.message.from.id}'>${ctx.message.from.first_name}</a> сильно пнул(а) <a href='t.me/${arg}'>похуй</a>`, { 
    parse_mode: "HTML", 
-   disable_web_page_preview: true 
-})
-})
+   disable_web_page_preview: true})
+} else {
+    ctx.reply(`<a href='tg://user?id=${ctx.message.from.id}'>${ctx.message.from.first_name}</a> сильно пнул(а) <a href='tg://user?id=${ctx.message.reply_to_message.from.id}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+        parse_mode: "HTML", 
+        disable_web_page_preview: true})
+}})
+
 bot.command('rphelp', (ctx) => {
     ctx.reply(`РП Команды:
 плюнуть,
@@ -433,7 +440,7 @@ bot.command('rphelp', (ctx) => {
 подарить благословение,
 изгнать демонов,
 покрестить,
-сильно пнуть,
+сильно пнуть[unavailable command],
 покормить с ложечки,
 сыграть в карты,
 позвать на забив,
