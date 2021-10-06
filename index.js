@@ -29,7 +29,7 @@ bot.command('id', (ctx) => {
     ctx.reply(`id chat: ${ctx.message.chat.id}`)
 })
 
-bot.command('mute', (ctx) => {
+bot.command('muter', (ctx) => {
     let arg = ctx.message.text.split(" ").slice(1).join(" ")
     if(ctx.message.chat.id !== -507019799)
     if(ctx.message.chat.id !== -1001190460163)
@@ -49,7 +49,7 @@ bot.command('mute', (ctx) => {
     }}}
 )
 
-bot.command('unmute', (ctx) => {
+bot.command('unmuter', (ctx) => {
     for (let i = 0; i < arr.length - 1; i++) {
     if (ctx.message.from.id === arr[i]) {
         try {
