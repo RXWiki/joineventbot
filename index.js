@@ -118,7 +118,7 @@ bot.command('kick', (ctx) => {
 // bot.action("yes", async (ctx) => {
 //     try {
 //         let counter = 0;
-//         await counter++;
+//         counter++;
 //        await ctx.reply(`${counter} проголосовалo за да`);
        
 //     } catch (e) {
@@ -282,7 +282,7 @@ bot.hears(/[Лл]ечь на плечо/g, (ctx) => {
 bot.hears(/[пП]оклониться/g, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
-    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> поклонился <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
+    ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name}</a> поклонился(ась) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name}</a>`, { 
    parse_mode: "HTML", 
    disable_web_page_preview: true 
 })
