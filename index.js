@@ -77,7 +77,7 @@ bot.on('left_chat_member', (ctx) => {
 })
 
 bot.on('new_chat_members', (ctx) => {
-    ctx.reply(`Добро пожаловать в беседу ${ctx.message.chat.title}! ${ctx.message.new_chat_members[0].first_name}!`)
+    ctx.reply(`Добро пожаловать в беседу **${ctx.message.chat.title}**! ${ctx.message.new_chat_members[0].first_name}!`)
 })
 bot.hears('правила', (ctx) => {
     ctx.reply(`Привет! ${ctx.message.from.first_name}
