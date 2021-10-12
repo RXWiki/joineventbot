@@ -180,7 +180,7 @@ bot.hears(/[Пп]люнуть/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> плюнул(а) в лицо <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(8,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(8,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -214,7 +214,7 @@ bot.hears(/[Сс]овершить двойное самоубийство/, (ctx
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> совершил(а) двойное убийство с <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(31,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(31,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -246,7 +246,7 @@ bot.hears(/[Уу]ничтожить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> уничтожил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(11,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(11,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -277,7 +277,7 @@ bot.hears(/[Пп]оцеловать в ручку/, (ctx) => {
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> нежно поцеловал(а) в ручку <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(19,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(19,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -308,7 +308,7 @@ bot.hears(/[Зз]асосать/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засосал(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(9,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(9,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -339,7 +339,7 @@ bot.hears(/[Сс]ильно обнять/, (ctx) => {
     try {   
         if (texter[2] === word[1] && word[1] !== undefined  || texter[1] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> крепко обнял(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(14,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(14,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -370,7 +370,7 @@ bot.hears(/[Вв]зять за ручку/, (ctx) => {
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> взял(а) нежно за ручку <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(15,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(15,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -401,7 +401,7 @@ bot.hears(/[Сс]ъесть/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> съел(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(7,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(7,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -432,7 +432,7 @@ bot.hears(/[Сс]есть/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> сел(а) на <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(6,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(6,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -463,7 +463,7 @@ bot.hears(/[Пп]риобнять/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> приобнял(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(10,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(10,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -494,7 +494,7 @@ bot.hears(/[Оо]скорбить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> грубо оскорбил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(10,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(10,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -525,7 +525,7 @@ bot.hears(/[Уу]душить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> удушил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(8,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(8,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -556,7 +556,7 @@ bot.hears(/[Рр]асчленить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> расчленил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(11,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(11,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -587,7 +587,7 @@ bot.hears(/[Вв]зять за волосы/, (ctx) => {
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> взял(а) нежно за волосы <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(16,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(16,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -618,7 +618,7 @@ bot.hears(/[Оо]бнять до удушья/, (ctx) => {
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> обнял(а) до удушья <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(17,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(17,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -649,7 +649,7 @@ bot.hears(/[Лл]ечь на плечо/, (ctx) => {
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> лег(ла) нежно на плечо <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(14,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(14,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -680,7 +680,7 @@ bot.hears(/[пП]оклониться/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> поклонился(лась) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(12,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(12,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -711,7 +711,7 @@ bot.hears(/[Уу]спокоить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> пытается успокоить <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(10,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(10,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -742,7 +742,7 @@ bot.hears(/[Ии]збить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> избил(а) до полусмерти <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(7,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(7,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -777,7 +777,7 @@ bot.hears(/[Пп]одарить цветочек/, (ctx) => {
     try {  
         if (texter[2] === word[1] && word[1] !== undefined  || texter[1] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> подарил(а) цветочек для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(18,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(18,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -808,7 +808,7 @@ bot.hears(/[Уу]далить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> удалил(а) из жизни <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(7,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(7,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -839,7 +839,7 @@ bot.hears(/[Пп]очинить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> вернул(а) к жизни <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(9,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(9,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -870,7 +870,7 @@ bot.hears(/[Пп]окрестить/, (ctx) => {
     try {
         if (texter[1] === word[0] || texter[0] === word1[0] && word[0] !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> покрестил(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(11,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(11,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -901,7 +901,7 @@ bot.hears(/[Пп]одарить благословение/, (ctx) => {
     try {    
         if (texter[2] === word[1] && word[1] !== undefined  || texter[1] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> подарил(а) благословение <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(23,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(23,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -932,7 +932,7 @@ bot.hears(/[Шш]вырнуть на пол/, (ctx) => {
     try {  
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> швырнул(а) на пол <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(16,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(16,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -963,7 +963,7 @@ bot.hears(/[Пп]риготовить еду/, (ctx) => {
     try {
         if (texter[2] === word[1] && word[1] !== undefined  || texter[1] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> приготовил(а) еду для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(16,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(16,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -994,7 +994,7 @@ bot.hears(/[Сс]делать подарок/, (ctx) => {
     try {
         if (texter[2] === word[1] && word[1] !== undefined  || texter[1] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> сделал(а) приятный подарок для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(16,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(16,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -1025,7 +1025,7 @@ bot.hears(/[Пп]озвать на забив/, (ctx) => {
     try {   
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> позвал(а) на забив <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(17,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(17,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -1056,7 +1056,7 @@ bot.hears(/[Сс]ыграть в карты/, (ctx) => {
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> сыграл(а) в карты против <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(16,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(16,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -1089,7 +1089,7 @@ bot.hears(/[Пп]окормить с ложечки/, (ctx) => {
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> покормил(а) с ложечки <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(18,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(18,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
@@ -1117,13 +1117,56 @@ bot.hears(/[Уу]дарить топором/, (ctx) => {
     let id = ctx.message.from.id
     let id2 = ctx.message.reply_to_message.from.id
     let tager = /[\p{sc=Cyrillic}+.,?!\s\u{1f300}-\u{1f5ff}\u{1f900}-\u{1f9ff}\u{1f600}-\u{1f64f}\u{1f680}-\u{1f6ff}\u{2600}-\u{26ff}\u{2700}-\u{27bf}\u{1f1e6}-\u{1f1ff}\u{1f191}-\u{1f251}\u{1f004}\u{1f0cf}\u{1f170}-\u{1f171}\u{1f17e}-\u{1f17f}\u{1f18e}\u{3030}\u{2b50}\u{2b55}\u{2934}-\u{2935}\u{2b05}-\u{2b07}\u{2b1b}-\u{2b1c}\u{3297}\u{3299}\u{303d}\u{00a9}\u{00ae}\u{2122}\u{23f3}\u{24c2}\u{23e9}-\u{23ef}\u{25b6}\u{23f8}-\u{23fa}]/ug
+    let smile = text.match(tager).join("").split(" ")
+    let smile1 = smile.join(" ")
+    console.log(" ")
     console.log(texter[2])
     console.log(word[1])
+    console.log(texter)
+    console.log(smile)
     try {   
-        if (texter[2] === word[1] && word[1] !== undefined  || texter[1] === word1[0] && word1 !== null) {
-            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав:  ${ctx.message.text.match(tager).join("").slice(16,)}`, {
+        if (texter[2] === word[1] && word[1] !== undefined || texter[1] === smile[1] && smile[1] !== undefined || texter[1] === word[0] && word !== undefined) {
+            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
+</a>Сказав: ${ctx.message.text.match(smile1).join("").slice(16,)}`, {
+                parse_mode: "HTML", 
+                disable_web_page_preview: true
+            })
+        } else {
+            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
+</a>`, {
                 parse_mode: "HTML",
+                disable_web_page_preview: true
+        })}
+    } catch (err) {
+        console.log(err)
+        ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
+            parse_mode: "HTML",
+            disable_web_page_preview: true
+        })
+    }
+})
+bot.hears(/[Кк]упить булочку/, (ctx) => {
+    let text = ctx.message.text
+    let texter = text.split(" ")
+    let tagi = /\p{sc=Cyrillic}+\n\p{sc=Cyrillic}+/gui
+    let word1 = text.match(tagi)
+    let tag = /\s\p{sc=Cyrillic}+/gui
+    let word = text.match(tag)
+    let id = ctx.message.from.id
+    let id2 = ctx.message.reply_to_message.from.id
+    let tager = /[\p{sc=Cyrillic}+.,?!\s\u{1f300}-\u{1f5ff}\u{1f900}-\u{1f9ff}\u{1f600}-\u{1f64f}\u{1f680}-\u{1f6ff}\u{2600}-\u{26ff}\u{2700}-\u{27bf}\u{1f1e6}-\u{1f1ff}\u{1f191}-\u{1f251}\u{1f004}\u{1f0cf}\u{1f170}-\u{1f171}\u{1f17e}-\u{1f17f}\u{1f18e}\u{3030}\u{2b50}\u{2b55}\u{2934}-\u{2935}\u{2b05}-\u{2b07}\u{2b1b}-\u{2b1c}\u{3297}\u{3299}\u{303d}\u{00a9}\u{00ae}\u{2122}\u{23f3}\u{24c2}\u{23e9}-\u{23ef}\u{25b6}\u{23f8}-\u{23fa}]/ug
+    let smile = text.match(tager).join("").split(" ")
+    let smile1 = smile.join(" ")
+    console.log(" ")
+    console.log(texter[2])
+    console.log(word[1])
+    console.log(texter)
+    console.log(smile)
+    try {   
+        if (texter[2] === word[1] && word[1] !== undefined || texter[1] === smile[1] && smile[1] !== undefined || texter[1] === word[0] && word !== undefined) {
+            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
+</a>Сказав: ${ctx.message.text.match(smile1).join("").slice(16,)}`, {
+                parse_mode: "HTML", 
                 disable_web_page_preview: true
             })
         } else {
@@ -1133,6 +1176,7 @@ bot.hears(/[Уу]дарить топором/, (ctx) => {
                 disable_web_page_preview: true
         })}
     } catch (err) {
+        console.log(err)
         ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
             parse_mode: "HTML",
             disable_web_page_preview: true
@@ -1150,7 +1194,7 @@ bot.hears(/[Уу]дарить топором/, (ctx) => {
 //     try {
 //         if (texter[1] === word[0]) {
 //             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> сильно пнул(а) <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-// </a>Сказав:  ${ctx.message.text.match(tager).join("").slice(13,)}`, {
+// </a>Сказав: ${ctx.message.text.match(tager).join("").slice(13,)}`, {
 //                 parse_mode: "HTML",
 //                 disable_web_page_preview: true
 //             })
@@ -1199,7 +1243,8 @@ bot.command('rphelp', (ctx) => {
 сделать подарок,
 приготовить еду,
 швырнуть на пол,
-ударить топором
+ударить топором,
+купить булочку
 `)
 })
 
