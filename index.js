@@ -1126,20 +1126,20 @@ bot.hears(/[Уу]дарить топором/, (ctx) => {
     console.log(smile)
     try {   
         if (texter[2] === word[1] && word[1] !== undefined || texter[1] === smile[1] && smile[1] !== undefined || texter[1] === word[0] && word !== undefined) {
-            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
+            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
 </a>Сказав: ${ctx.message.text.match(smile1).join("").slice(16,)}`, {
                 parse_mode: "HTML", 
                 disable_web_page_preview: true
             })
         } else {
-            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
+            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
 </a>`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
         })}
     } catch (err) {
         console.log(err)
-        ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
+        ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         })
@@ -1164,20 +1164,20 @@ bot.hears(/[Кк]упить булочку/, (ctx) => {
     console.log(smile)
     try {   
         if (texter[2] === word[1] && word[1] !== undefined || texter[1] === smile[1] && smile[1] !== undefined || texter[1] === word[0] && word !== undefined) {
-            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
+            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
 </a>Сказав: ${ctx.message.text.match(smile1).join("").slice(16,)}`, {
                 parse_mode: "HTML", 
                 disable_web_page_preview: true
             })
         } else {
-            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
+            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
 </a>`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
         })}
     } catch (err) {
         console.log(err)
-        ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> засунул(а) топор в жопу к <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
+        ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         })
