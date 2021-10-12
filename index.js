@@ -1165,7 +1165,7 @@ bot.hears(/[Кк]упить булочку/, (ctx) => {
     try {   
         if (texter[2] === word[1] && word[1] !== undefined || texter[1] === smile[1] && smile[1] !== undefined || texter[1] === word[0] && word !== undefined) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав: ${ctx.message.text.match(smile1).join("").slice(16,)}`, {
+</a>Сказав: ${ctx.message.text.match(smile1).join("").slice(15,)}`, {
                 parse_mode: "HTML", 
                 disable_web_page_preview: true
             })
