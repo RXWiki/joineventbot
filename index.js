@@ -1214,7 +1214,7 @@ bot.hears(/[Пп]ригласить в бс/, (ctx) => {
     try {
         if (texter[3] === word[2] && word[2] !== undefined || texter[2] === word1[0] && word1 !== null) {
             ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> пригласил(а) поиграть в бравл старс <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}
-</a>Сказав: ${ctx.message.text.match(tager).join("").slice(31,)}`, {
+</a>Сказав: ${ctx.message.text.match(tager).join("").slice(16,)}`, {
                 parse_mode: "HTML",
                 disable_web_page_preview: true
             })
