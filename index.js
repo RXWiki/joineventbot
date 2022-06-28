@@ -1218,13 +1218,13 @@ bot.hears(/[Пп]ригласить в бс/, (ctx) => {
             })
         } else {
             console.log('f')
-            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
+            ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> пригласил(а) поиграть в бравл старс <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         })
         }
     } catch (err) {
-        ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> купил(а) булочку для <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
+        ctx.reply(`<a href='tg://user?id=${id}'>${ctx.message.from.first_name.replace(/[><]/g, '')}</a> пригласил(а) поиграть в бравл старс <a href='tg://user?id=${id2}'>${ctx.message.reply_to_message.from.first_name.replace(/[><]/g, '')}</a>`, {
             parse_mode: "HTML",
             disable_web_page_preview: true
         })
