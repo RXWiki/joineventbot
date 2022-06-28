@@ -1199,7 +1199,7 @@ bot.hears(/[Ии]згнать демонов/, (ctx) => {
             disable_web_page_preview: true
         })
     }
-
+})
     bot.hears(/[Пп]ригласить в бравл/, (ctx) => {
 
     let text = ctx.message.text
