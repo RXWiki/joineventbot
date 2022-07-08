@@ -21,21 +21,6 @@ require("dotenv").config();
 const bot = new Telegraf(process.env.token)
 let arr = [946645161, 1147885120, 813881359,1051819259, 1999158089];
 
-
-// bot.start((ctx) => ctx.reply('Welcome'))
-
-// const stage = new Stage([ageScene, nameScene])
-
-// bot.use(session())
-
-// bot.use(stage.middleware())
-
-// bot.command('scenes', async (ctx) => {
-//     await ctx.scene.enter('age')
-//     ctx.reply(`Hi`)
-// })
-
-
 bot.command('id', (ctx) => {
     ctx.reply(`id chat: ${ctx.message.chat.id}`)
 })
@@ -114,58 +99,6 @@ bot.command('kick', (ctx) => {
         }
     }
 })
-
-// bot.on('poll',async (ctx) => {
-//     let yes = ctx.poll.options[0].voter_count
-//     let no = ctx.poll.options[1].voter_count
-//     await console.log(`for yes: ${yes}; for no: ${no}`)
-// })
-
-// bot.command('testing', (ctx) => {
-//     try{
-//     ctx.reply(`kick? ${ctx.message.reply_to_message.from.first_name}`, Markup.inlineKeyboard([
-//         [Markup.button.callback("yes", "yes")],
-//         [Markup.button.callback("no", "no")]
-//      ]));
-//     } catch(err) {
-//         console.log(err)
-//     }
-// })
-
-// bot.action("yes", async (ctx) => {
-//     try {
-//         let counter = 0;
-//         counter++;
-//        await ctx.reply(`${counter} проголосовалo за да`);
-
-//     } catch (e) {
-//        console.log(e);
-//     }
-//  });
-
-// bot.action("no", async (ctx) => {
-//     try {
-//         let counter = 0;
-//         await ctx.reply(`${counter} проголосовало за нет`);
-//         counter++;
-//     } catch (e) {
-//        console.log(e);
-//     }
-//  });
-
-// bot.command('voteban', (ctx) => {
-
-//     for (let i = 0; i < arr.length; i++){
-//         if (ctx.message.from.id === arr[i]) {
-//         setTimeout(() => {
-//         ctx.telegram.sendPoll(ctx.message.chat.id, `Kick this ${ctx.message.reply_to_message.from.first_name} ${ctx.message.reply_to_message.from.id}`, ['yes', 'no'], {
-//             is_anonymous: true,
-//             allows_multiple_answers: false,
-//             open_period: 60
-//         }
-//         )
-//         , 10000, console.log(`успешно`)})}}})
-
 
 bot.hears(/[Пп]люнуть/, (ctx) => {
     let text = ctx.message.text
