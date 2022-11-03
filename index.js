@@ -20,25 +20,6 @@ const nameScene = curScene.GenNameScene()
 require("dotenv").config();
 const bot = new Telegraf(process.env.token)
 let arr = [946645161, 1147885120, 813881359,1051819259, 1999158089];
-const API_KEY = 'f080ed440027f694b5d5f65b70d6d420';
-const API_URL       = 'https://api.openweathermap.org/data/2.5/weather';
-const FULL_API_URL  = `${API_URL}?id=${LOCATION_CODE}&appid=${API_KEY}`;
-bot.hears(/[Пп]огода/, (ctx) => {
-    let text = ctx.message.text
-    let texter = text.split(" ")
-    let LOCATION_CODE = texter[1]
-
-axios.get(FULL_API_URL).then(response => {
-    const temperatureK = response.data.main.temp;
-    const cityName     = response.data.name;
-    const countryName  = response.data.sys.country;
-
-    const temperatureC = temperatureK - 273.15;   
-})
-ctx.reply(`Прямо сейчас в ${cityName}, ${countryName} температура ${temperatureK}`)
-return LOCATION_CODE;
-})
-
 bot.command('id', (ctx) => {
     ctx.reply(`id chat: ${ctx.message.chat.id}`)
 })
